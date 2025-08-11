@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ayushman Paudel — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Tip: create /sitemap.xml and /robots.txt and submit your site to Google Search Console for best indexing. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- SEO basics -->
+  <meta name="description" content="Official portfolio of Ayushman Paudel — Web Developer from Chitwan, Nepal. Explore projects, contact info, and social links.">
+  <meta name="author" content="Ayushman Paudel">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b0f">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ayushman Paudel — Portfolio">
+  <meta property="og:description" content="Web Developer from Chitwan, Nepal. Latest projects, contact, and socials.">
+  <!-- Update og:url when you have a final domain -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="https://scontent.fbwa5-1.fna.fbcdn.net/v/t39.30808-6/467021835_1635177010687185_6725362027773047782_n.jpg">
+  <meta property="og:locale" content="en_US">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ayushman Paudel — Portfolio">
+  <meta name="twitter:description" content="Web Developer from Chitwan, Nepal. Projects, contact, and socials.">
+  <meta name="twitter:image" content="https://scontent.fbwa5-1.fna.fbcdn.net/v/t39.30808-6/467021835_1635177010687185_6725362027773047782_n.jpg">
+  <!-- Optional: set canonical once your domain is final
+  <link rel="canonical" href="https://your-domain.example/" />
+  -->
   <style>
     :root{
       --bg:#0b0b0f;
@@ -120,10 +144,10 @@
   <nav>
     <button class="menu-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="#socials">Socials</a>
+  <a href="#about" aria-label="About Ayushman Paudel">About</a>
+  <a href="#projects" aria-label="Projects by Ayushman Paudel">Projects</a>
+  <a href="#contact" aria-label="Contact Ayushman Paudel">Contact</a>
+  <a href="#socials" aria-label="Ayushman Paudel social links">Socials</a>
       <a href="https://kamauchanepali.com" target="_blank" rel="noopener">Kamaucha Nepali</a>
       <a href="https://github.com/AYUSHMANPAUDEL" target="_blank" rel="noopener">GitHub</a>
     </div>
@@ -134,7 +158,7 @@
     <div class="hero-container">
       <div class="hero-inner">
         <div class="kicker">Chitwan • Nepal</div>
-  <h1><span class="name-typing" id="nameTyping"></span><span class="caret">|</span> <span class="muted">— Passionate Developer</span></h1>
+  <h1><span class="name-typing" id="nameTyping">Ayushman Paudel</span><span class="caret">|</span> <span class="muted">— Passionate Developer</span></h1>
         <p class="lead">I build reliable, modern web applications. I've worked on several projects, participated in many IT initiatives and hackathons. Currently developing <strong>Kamaucha Nepali</strong>, a platform that lets streamers receive tips from viewers using Nepali payment methods.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">See Projects</a>
@@ -194,6 +218,26 @@
   </footer>
 
   <script>
+    // JSON-LD: Person schema
+    (function(){
+      const ld = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ayushman Paudel",
+        "jobTitle": "Web Developer",
+        "address": {"@type":"PostalAddress","addressLocality":"Chitwan","addressCountry":"NP"},
+        "url": "",
+        "sameAs": [
+          "https://github.com/AYUSHMANPAUDEL",
+          "https://www.linkedin.com/in/ayushman-paudel-33b05327b/",
+          "https://www.instagram.com/ayushman_paudel7/"
+        ]
+      };
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(ld);
+      document.head.appendChild(s);
+    })();
     // GitHub repo loader (unchanged)
     const username = 'AYUSHMANPAUDEL';
     async function loadRepos(){
