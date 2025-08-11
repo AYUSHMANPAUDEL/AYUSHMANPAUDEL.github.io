@@ -103,6 +103,18 @@
   .loader{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--muted);padding:14px}
   .spinner{width:16px;height:16px;border:3px solid rgba(255,255,255,0.18);border-top-color:var(--accent1);border-radius:50%;animation:spin 1s linear infinite}
 
+    /* Social links hover effect (match navbar accent) */
+    #socials a{
+      color:var(--muted);
+      transition:color .2s ease, text-shadow .2s ease;
+    }
+    #socials a:hover,
+    #socials a:focus-visible{
+      color:var(--accent1);
+      text-shadow:0 0 10px rgba(0,212,255,0.35);
+      outline:none;
+    }
+
     /* Center About, Contact, and Socials content */
     #about, #contact, #socials{
       display:flex;
